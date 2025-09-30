@@ -10,9 +10,23 @@ package control;
  */
 public class MainController {
     
+   private DatabaseController dbCtrl;
+    
     public MainController(){
         
-        FormController frmCtrl = new FormController();
+        checkDatabase();
+    }
+    
+    private void checkDatabase() {
+        dbCtrl = new DatabaseController();
+        boolean success = dbCtrl.connect();
+        
+        if(success ) {
+            System.out.println("Kapcsolat  OK");
+        } else {
+            System.err.println("Nincs kapcsolat");
+        }
+        
     }
     
 }
