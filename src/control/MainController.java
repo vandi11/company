@@ -23,6 +23,7 @@ public class MainController {
         
          dbCtrl = new DatabaseController();
          frmCtrl = new FormController( dbCtrl);
+         checkDatabase();
     }
     
     private void checkDatabase() {
