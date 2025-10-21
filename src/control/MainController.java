@@ -11,14 +11,24 @@ package control;
 public class MainController {
     
    private DatabaseController dbCtrl;
+   private FormController frmCtrl;
     
     public MainController(){
         
+        start();
         checkDatabase();
     }
     
+    private void start(){
+        
+         dbCtrl = new DatabaseController();
+         frmCtrl = new FormController( dbCtrl);
+    }
+    
     private void checkDatabase() {
-        dbCtrl = new DatabaseController();
+        
+        
+       
         boolean success = dbCtrl.connect();
         
         if(success ) {

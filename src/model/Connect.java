@@ -20,12 +20,14 @@ public class Connect {
     private String pass;
     private String url;
     
-    public Connect( String dbName, String user, String pass) {
+    public Connect() {
         
-        this.dbName = dbName;
+      /*  this.dbName = dbName;
         this.user = user;
         this.pass = pass;
-        url = "jdbc:mariadb://localhost:3306/";
+        url = "jdbc:mariadb://localhost:3306/"; */
+      
+      conn = null;
         
     }
     

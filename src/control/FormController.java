@@ -14,12 +14,26 @@ import view.MainForm;
 public class FormController {
     
     private MainForm mainFrm;
+    private DatabaseController dbCtrl;
     
-    public FormController() {
+    public FormController( DatabaseController dbCtrl) {
         
+        
+        this.dbCtrl = dbCtrl;
+        initComponents();
+        
+        
+    }
+    
+    private void initComponents(){
         mainFrm = new MainForm();
-        mainFrm.setVisible( true);
+        mainFrm.getExitBtn().addActionListener (event -> exit() );
+        mainFrm.setVisible(true);
         
+        
+    }
+    private void exit() {
+        System.exit(0);
     }
     
 }

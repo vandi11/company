@@ -6,6 +6,7 @@ package control;
 
 import model.Connect;
 import java.sql.Connection;
+import java.util.Vector;
 
 /**
  *
@@ -21,7 +22,7 @@ public class DatabaseController {
     
     protected boolean connect(){
         
-        Connect connect = new Connect( "company" ,"root" ,""); //!!!!!"root "
+        Connect connect = new Connect( ); //!!!!!"root "
         connect.connecting();
         conn = connect.getConn();
         
@@ -30,6 +31,11 @@ public class DatabaseController {
         }else {
             return false;
         }
+        
+    }
+    
+    protected Vector<Vector<Object>> getWorkerData() {
+        
         
     }
 }
