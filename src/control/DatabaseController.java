@@ -21,7 +21,7 @@ public class DatabaseController {
     
     protected boolean connect(){
         
-        Connect connect = new Connect( "company" ,"root " ,"");
+        Connect connect = new Connect( "company" ,"root" ,""); //!!!!!"root "
         connect.connecting();
         conn = connect.getConn();
         

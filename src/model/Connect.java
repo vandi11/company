@@ -35,11 +35,14 @@ public class Connect {
         conn = null;
         String user = "?username=" + this.user;
         String pass = "&password=" + this.pass;
+        System.out.println(url + dbName + user + pass);
         try {
-            conn = DriverManager.getConnection( url + dbName + user + pass);
+            //conn = DriverManager.getConnection( url + dbName + user + pass);
+            conn=DriverManager.getConnection("jdbc:mariadb://localhost:3306/company","root","");
         } catch (SQLException ex) {
             
             System.err.println( "Hiba a  kapcsolódás során" );
+            ex.printStackTrace();
         }
     }
 
