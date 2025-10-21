@@ -20,7 +20,7 @@ public class SqlRunner {
     
     private String fileName;
     
-    private SqlRunner(String sqlName) {
+    public SqlRunner(String sqlName) {
         
         
         fileName = "sql/" + sqlName + ".sql"; // sql/__GETWORKERS__.sql
